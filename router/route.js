@@ -63,7 +63,7 @@ router.post('/login', async(req,res)=>{
                         if(token){
                             res.cookie("usertoken", token, {
                                 expires:new Date(Date.now()+25000),
-                                httpOnly:false
+                                httpOnly:true
                             })
                             res.status(201).json({message:"Login Successfull"});
                          }
