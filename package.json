@@ -1,0 +1,26 @@
+{
+  "name": "merncommunity",
+  "version": "1.0.0",
+  "description": "merncommunity developed using mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "author": "nitesh agnihotri",
+  "license": "ISC",
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.3.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "path": "^0.12.7"
+  }
+}

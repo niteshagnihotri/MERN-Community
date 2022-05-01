@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclient=self.webpackChunkclient||[]).push([[149],{149:function(e,n,t){t.r(n),t.d(n,{default:function(){return r}});var c=t(184);function r(){return(0,c.jsx)("div",{children:(0,c.jsx)("h1",{className:"text-center",children:"Contact page"})})}}}]);
+//# sourceMappingURL=149.08a55b3c.chunk.js.map
