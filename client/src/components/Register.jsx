@@ -105,7 +105,7 @@ export default function Register() {
                             <input type="password" name="cpassword" onChange={handleInputs} placeholder="Confirm Password: " />
                         </div>
                         <div>
-                            <button onClick={SendData} type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg px-5 py-2 text-center mr-2">Login </button>
+                            <button onClick={SendData} type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg px-5 py-2 text-center mr-2">Register </button>
                         </div>
                         
                         <h5 className='text-red-600'>{error}</h5>
