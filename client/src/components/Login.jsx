@@ -48,7 +48,7 @@ export default function Login() {
                         Cookies.remove('name', { path: '' });
                         console.log("user already logged out");
                     }
-                }, 23000);
+                }, 43000);
 
             }
             else if (res.status === 403) {

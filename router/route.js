@@ -62,7 +62,7 @@ router.post('/login', async(req,res)=>{
                         const token = await userLogin.generateAuthToken();
                         if(token){
                             res.cookie("usertoken", token, {
-                                expires:new Date(Date.now()+25000),
+                                expires:new Date(Date.now()+45000),
                                 httpOnly:false
                             })
                             res.status(201).json({message:"Login Successfull"});
