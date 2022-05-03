@@ -3,6 +3,7 @@ const router = express();
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const authenticate = require('../middleware/authenticate');
+const { db } = require('../models/user');
 
 router.post('/register', async (req,res)=>{
 
@@ -62,7 +63,7 @@ router.post('/login', async(req,res)=>{
                         const token = await userLogin.generateAuthToken();
                         if(token){
                             res.cookie("usertoken", token, {
-                                expires:new Date(Date.now()+45000),
+                                expires:new Date(Date.now()+50000),
                                 httpOnly:false
                             })
                             res.status(201).json({message:"Login Successfull"});
@@ -73,6 +74,24 @@ router.post('/login', async(req,res)=>{
         }
         catch(err){
         console.log(err);
+    }
+
+});
+
+router.get('/contact', async (req,res)=>{
+    const data = await User.find({})
+    try{
+        res.status(200).json({
+            status : 'Success',
+            data : {
+                data
+            }
+        })
+    }catch(err){
+        res.status(500).json({
+            status: 'Failed',
+            message : err
+        })
     }
 
 });
